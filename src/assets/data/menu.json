@@ -1,0 +1,22 @@
+[{
+        "icon": "options",
+        "name": "Indicadores",
+        "redirectTo": "indicators"
+    },
+    {
+        "icon": "mail",
+        "name": "Mensajes",
+        "redirectTo": "inbox"
+    },
+    {
+        "icon": "person",
+        "name": "Perfil del cuidador",
+        "redirectTo": "profile"
+    },
+    {
+        "icon": "exit",
+        "name": "Cerrar sesión",
+        "redirectTo": ""
+    }
+
+]
