@@ -1,0 +1,46 @@
+.mainSlide,
+.mainSlide ion-slide {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 120px;
+}
+
+.pick-avatar {
+    width: 80px;
+    opacity: 0.3;
+}
+
+.pick-avatar-seleccionado {
+    transition: opacity 0.5s linear;
+    opacity: 1 !important;
+}
+
+.titulo {
+    font-size: 22pt;
+    text-align: center;
+}
+
+.texto {
+    text-align: justify;
+    list-style: none;
+    border: 0%;
+}
+
+#container {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

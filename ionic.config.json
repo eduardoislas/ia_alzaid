@@ -1,5 +1,7 @@
 {
   "name": "ai-alzaid",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  constructor(private menu: MenuController, private router: Router) { 
+    this.menu.enable(true, 'first');
+  }
 
   ngOnInit() {
+    
+  }
+
+  perfil(){
+    this.router.navigateByUrl("profile");
   }
 
 }

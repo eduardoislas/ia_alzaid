@@ -1,9 +1,172 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+    <ion-slides class="mainSlide" #slidePrincipal>
 
+        <ion-slide>
+            <form (ngSubmit)="begin( fBegin )" #fBegin="ngForm">
+                <ion-row class="vertical-center">
+
+                    <div class="center">
+                        <ion-img style="width: 200px; height: 200px;" src="../../assets/img/logo.png"></ion-img>
+                    </div>
+
+                </ion-row>
+
+
+                <ion-grid fixed>
+                    <ion-row>
+                        <ion-col>
+                            <ion-list>
+                                <ion-item>
+                                    <ion-label class="titulo">Bienvenido</ion-label>
+
+                                </ion-item>
+                                <ion-item>
+                                    <ion-textarea class="texto">Nuestro Asistente Inteligente Alzaid formará parte de tu red de apoyo para resolver tus dudas sobre la enfermedad de Alzheimer, y si le cuentas un poco sobre tu ser amado con esta enfermedad, te ayudará con la adecuación
+                                        de actividades, dietas, entre otras cosas. </ion-textarea>
+                                </ion-item>
+                            </ion-list>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <ion-button type="submit" color="primary" shape="round">
+                                Comenzar
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </form>
+        </ion-slide>
+
+        <ion-slide>
+            <form (ngSubmit)="login( fLogin )" #fLogin="ngForm">
+                <ion-grid fixed>
+
+                    <ion-row>
+                        <ion-col>
+                            <img src="/assets/avatars/av-1.png">
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+
+                            <ion-list>
+
+                                <ion-item>
+                                    <!-- <ion-label>Correo electrónico</ion-label> -->
+                                    <ion-input placeholder="Correo electrónico" name="email" type="email"></ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <!-- <ion-label>Contraseña</ion-label> -->
+                                    <ion-input placeholder="Contraseña" name="password" type="password"></ion-input>
+                                </ion-item>
+
+                            </ion-list>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+                            <ion-button type="submit" color="primary" shape="round">
+                                Iniciar sesión
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+
+                </ion-grid>
+            </form>
+
+
+        </ion-slide>
+
+        <ion-slide>
+
+            <ion-grid fixed>
+
+                <ion-row>
+                    <ion-col>
+                        <h3>Seleccione Avatar</h3>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col>
+                        <ion-slides [options]="avatarSlide ">
+                            <ion-slide *ngFor="let avatar of avatars ">
+                                <ion-img class="pick-avatar" src="/assets/avatars/{{avatar.img}}" [ngClass]="{ 'pick-avatar-seleccionado': avatar.seleccionado } " (click)="seleccionarAvatar( avatar ) "></ion-img>
+                            </ion-slide>
+                        </ion-slides>
+                    </ion-col>
+                </ion-row>
+
+                <form (ngSubmit)="register( fRegister )" #fRegister="ngForm">
+                    <ion-row>
+                        <ion-col>
+
+                            <ion-list>
+
+                                <ion-item>
+                                    <!-- <ion-label>Correo electrónico</ion-label> -->
+                                    <ion-input placeholder="Correo electrónico" name="email" type="email" required></ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <!-- <ion-label>Nombre</ion-label> -->
+                                    <ion-input placeholder="Nombre" name="name" type="text" required></ion-input>
+                                </ion-item>
+
+                                <ion-item>
+                                    <!-- <ion-label>Contraseña</ion-label> -->
+                                    <ion-input placeholder="Contraseña" name="password" type="password" required></ion-input>
+                                </ion-item>
+
+                            </ion-list>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+                            <ion-button type="submit" color="primary" shape="round">
+                                Crear usuario
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+
+                </form>
+            </ion-grid>
+
+        </ion-slide>
+    </ion-slides>
 </ion-content>
+
+<ion-footer no-border>
+    <ion-toolbar>
+        <ion-row>
+            <ion-col>
+                <ion-button type="submit" color="danger" shape="round" expand="full" size="small" (click)="loginGoogle()">
+                    <ion-icon name="logo-google"> </ion-icon>
+                    Iniciar con Google
+                </ion-button>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+
+            <ion-col>
+                <ion-button shape="round" expand="full" size="small" fill="outline" color="primary" (click)="mostrarLogin()">
+                    Ingresar
+                </ion-button>
+            </ion-col>
+
+            <ion-col>
+                <ion-button shape="round" expand="full" size="small" fill="outline" color="primary" (click)="mostrarRegistro()">
+                    Registrarme
+                </ion-button>
+            </ion-col>
+
+        </ion-row>
+
+    </ion-toolbar>
+</ion-footer>

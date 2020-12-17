@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "885861179919",
+    "firebase_url": "https://loginaip-ca6b8.firebaseio.com",
+    "project_id": "loginaip-ca6b8",
+    "storage_bucket": "loginaip-ca6b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885861179919:android:474937030039ad3866f97a",
+        "android_client_info": {
+          "package_name": "com.alzaid_ai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885861179919-of46vhusrhhrajgmdt4th8c7ko75e1cf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alzaid_ai",
+            "certificate_hash": "a621b2d911a99644824edc19afc9c9e8e4733778"
+          }
+        },
+        {
+          "client_id": "885861179919-afmh5u02ou6tbkgf8e59kicstj9fulmi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZaIrhNbi6opsNQUFoa55rbAagoamJmpA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885861179919-afmh5u02ou6tbkgf8e59kicstj9fulmi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

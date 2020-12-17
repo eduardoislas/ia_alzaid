@@ -1,5 +1,29 @@
 <app-header titulo="Indicadores"></app-header>
 
-<ion-content>
 
+<ion-toolbar>
+    <ion-segment value="1" (ionChange)="segmentChanged($event)" color="primary">
+        <ion-segment-button value="1">
+            <ion-label>Paciente</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="2">
+            <ion-label>Cuidador</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-toolbar>
+
+
+<ion-content>
+    <ion-item *ngFor="let i of instruments_selected">
+        <ion-label>
+            <h3>{{i.title}}</h3>
+            <p>{{i.current_value}}</p>
+        </ion-label>
+        <ion-button slot="end" color="primary" shape="round">
+            <ion-icon name="list"></ion-icon>
+        </ion-button>
+        <ion-button slot="end" color="primary" shape="round">
+            <ion-icon name="pencil"></ion-icon>
+        </ion-button>
+    </ion-item>
 </ion-content>

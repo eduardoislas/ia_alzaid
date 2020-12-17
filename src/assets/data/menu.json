@@ -1,4 +1,9 @@
 [{
+        "icon": "home",
+        "name": "Principal",
+        "redirectTo": "home"
+    },
+    {
         "icon": "options",
         "name": "Indicadores",
         "redirectTo": "indicators"
@@ -18,5 +23,4 @@
         "name": "Cerrar sesión",
         "redirectTo": ""
     }
-
 ]
