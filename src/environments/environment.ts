@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  dialogflow: {
+    angularBot: 'e15c2526cde546cb9df9da412ead3d50'
+  }
 };
 
 export const firebaseConfig = {
