@@ -1,0 +1,181 @@
+[{
+        "instrument": "barthel",
+        "description": "Actividades básicas de la vida diaria",
+        "item": "Comer",
+        "answers": [{
+                "answer": "Totalmente independiente",
+                "points": 10
+            },
+            {
+                "answer": "Necesita ayuda para cortar carne, pan, etc.",
+                "points": 5
+            },
+            {
+                "answer": "Dependiente",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "instrument": "barthel",
+        "description": "Actividades básicas de la vida diaria",
+        "item": "Lavarse",
+        "answers": [{
+                "answer": "Independiente: entra y sale solo del baño",
+                "points": 5
+            },
+            {
+                "answer": "Dependiente",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "instrument": "barthel",
+        "description": "Actividades básicas de la vida diaria",
+        "item": "Vestirse",
+        "answers": [{
+                "answer": "Independiente: capaz de ponerse y quitarse la ropa, abotonarse, atarse los zapatos",
+                "points": 10
+            },
+            {
+                "answer": "Necesita ayuda",
+                "points": 5
+            },
+            {
+                "answer": "Dependiente",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "instrument": "barthel",
+        "description": "Actividades básicas de la vida diaria",
+        "item": "Arreglarse",
+        "answers": [{
+                "answer": "Independiente para lavarse la cara, manos, peinarse, afeitarse, maquillarse, etc.",
+                "points": 5
+            },
+            {
+                "answer": "Dependiente",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "instrument": "barthel",
+        "description": "Actividades básicas de la vida diaria",
+        "item": "Deposiciones",
+        "answers": [{
+                "answer": "Continencia normal",
+                "points": 10
+            },
+            {
+                "answer": "Ocasionalmente algún episodio de incontinencia, o necesita ayuda para administrarse supositorios o lavativas.",
+                "points": 5
+            },
+            {
+                "answer": "Incontinencia",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "instrument": "barthel",
+        "description": "Actividades básicas de la vida diaria",
+        "item": "Micción",
+        "answers": [{
+                "answer": "Continencia normal, o es capaz de cuidarse de la sonda si tiene una puesta.",
+                "points": 10
+            },
+            {
+                "answer": "Un episodio como máximo de incontinencia, o necesita ayuda para cuidar de la sonda.",
+                "points": 5
+            },
+            {
+                "answer": "Incontinencia",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "instrument": "barthel",
+        "description": "Actividades básicas de la vida diaria",
+        "item": "Uso de retrete",
+        "answers": [{
+                "answer": "Independiente para ir al cuarto de aseo, quitarse y ponerse la ropa.",
+                "points": 10
+            },
+            {
+                "answer": "Necesita ayuda para ir al retrete, pero se limpia solo.",
+                "points": 5
+            },
+            {
+                "answer": "Dependiente",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "instrument": "barthel",
+        "description": "Actividades básicas de la vida diaria",
+        "item": "Trasladarse",
+        "answers": [{
+                "answer": "Independiente para ir del sillón a la cama.",
+                "points": 15
+            },
+            {
+                "answer": "Mínima ayuda física o supervisión para hacerlo.",
+                "points": 10
+            },
+            {
+                "answer": "Necesita gran ayuda, pero es capaz de mantenerse sentado solo.",
+                "points": 5
+            },
+            {
+                "answer": "Dependiente",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "instrument": "barthel",
+        "description": "Actividades básicas de la vida diaria",
+        "item": "Deambular",
+        "answers": [{
+                "answer": "Independiente, camina solo 50 metros.",
+                "points": 15
+            },
+            {
+                "answer": "Necesita ayuda física o supervisión para caminar 50 metros.",
+                "points": 10
+            },
+            {
+                "answer": "Independiente en silla de ruedas sin ayuda.",
+                "points": 5
+            },
+            {
+                "answer": "Dependiente",
+                "points": 0
+            }
+        ]
+    },
+    {
+        "instrument": "barthel",
+        "description": "Actividades básicas de la vida diaria",
+        "item": "Escalones",
+        "answers": [{
+                "answer": "Independiente para bajar y subir escaleras",
+                "points": 10
+            },
+            {
+                "answer": "Necesita ayuda física o supervisión para hacerlo.",
+                "points": 5
+            },
+            {
+                "answer": "Dependiente",
+                "points": 0
+            }
+        ]
+    }
+]

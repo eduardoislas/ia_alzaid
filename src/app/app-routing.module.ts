@@ -10,7 +10,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
+    pathMatch: 'full'
   },
   {
     path: 'profile',
@@ -25,8 +26,16 @@ const routes: Routes = [
     loadChildren: () => import('./pages/indicators/indicators.module').then( m => m.IndicatorsPageModule)
   },
   {
+    path: 'instrument',
+    loadChildren: () => import('./pages/indicators/instrument/instrument.module').then( m => m.InstrumentPageModule)
+  },
+  {
     path: 'inbox',
     loadChildren: () => import('./pages/inbox/inbox.module').then( m => m.InboxPageModule)
+  },
+  {
+    path: 'posts',
+    loadChildren: () => import('./pages/posts/posts.module').then( m => m.PostsPageModule)
   },
 ];
 

@@ -12,13 +12,19 @@ export class IndicatorsPage implements OnInit {
     // 1 - Pacientes
     // 2 - Cuidadores
     {
-      title: 'Actividades de la vida diaria',
+      instrument: 'barthel',
+      title: 'Actividades Básicas de la vida diaria',
       current_value: 'Dependencia leve',
       toWhom: 1
     },
     {
-      title: 'Autonomía',
+      title: 'Actividades Instrumentales de la vida diaria',
       current_value: 'Dependencia moderada',
+      toWhom: 1
+    },
+    {
+      title: 'Equilibrio y marcha',
+      current_value: 'Alto riesgo de caída',
       toWhom: 1
     },
     {

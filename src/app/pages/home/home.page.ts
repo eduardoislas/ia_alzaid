@@ -38,15 +38,28 @@ export class HomePage implements OnInit, OnDestroy {
     private tts: TextToSpeech,
     private storage: Storage
     ) 
-  { 
-    this.menu.enable(true, 'first');
-    this.storage.get('usuario').then((val) => {
-      this.user = val;
+    { 
+      this.menu.enable(true, 'first');
+      this.storage.get('usuario').then((val) => {
+        this.user = val;
     })
-    }
+  }
+  
+  ngOnInit() {
+    this.subscription = this.chat.conversation.subscribe((data)=>this.responseonseHandler(data));
+    this.sendMessage("init_chat_saludo");
+    //this.startListening();
+  }
+
+  ngOnDestroy(){    
+    if(this.subscription)
+      this.subscription.unsubscribe();
+    this.messages = [];
+    this.stopListening();
+  }
 
   perfil(){
-    this.router.navigateByUrl("profile");
+    this.router.navigateByUrl("/profile");
   }
 
   getPermission(){
@@ -82,7 +95,7 @@ export class HomePage implements OnInit, OnDestroy {
       return;
     }
     let options={
-      language: 'es-ES'
+      language: 'es-MX'
     }
     this.isRecording=true;
     // Start the recognition process
@@ -106,25 +119,13 @@ export class HomePage implements OnInit, OnDestroy {
     return this.plt.is('ios');
   }
 
-  ngOnInit() {
-    this.subscription = this.chat.conversation.subscribe((data)=>this. responseonseHanlder(data));
-    this.sendMessage("init_chat_saludo");
-    //this.startListening();
-  }
-
-  ngOnDestroy(){    
-    if(this.subscription)
-      this.subscription.unsubscribe();
-    this.messages = [];
-    this.stopListening();
-  }
 
   sendMessage(message) {
     this.chat.sendMessage(message);
     this.cd.detectChanges();
   }
 
-   responseonseHanlder(data){
+   responseonseHandler(data){
     console.log(data);
     if(data.length>0){
       this.scrollToBottom();
@@ -176,7 +177,8 @@ export class HomePage implements OnInit, OnDestroy {
   doAction(message){
     if(message.action!="" && message.action!="input.unknown")
       setTimeout(()=>{
-        this.navCtrl.navigateRoot(["/"+message.action]);
+        this.navCtrl.navigateRoot(["/home"]);
+        // this.navCtrl.navigateRoot(["/"+message.action]);
       },2000)
   }
 }

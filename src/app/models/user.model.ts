@@ -1,7 +1,7 @@
 export class User {
-    name: string;
+    name: string = 'Usuario';
     email: string
     password: string;
-    picture: string;
+    picture: string = '../assets/img/user.png';
     isGoogle: boolean;
 }

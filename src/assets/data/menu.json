@@ -4,14 +4,19 @@
         "redirectTo": "home"
     },
     {
-        "icon": "options",
-        "name": "Indicadores",
-        "redirectTo": "indicators"
+        "icon": "thumbs-up",
+        "name": "Publicaciones",
+        "redirectTo": "posts"
     },
     {
         "icon": "mail",
         "name": "Mensajes",
         "redirectTo": "inbox"
+    },
+    {
+        "icon": "options",
+        "name": "Indicadores",
+        "redirectTo": "indicators"
     },
     {
         "icon": "person",

@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: IndicatorsPage
+  },
+  {
+    path: 'instrument',
+    loadChildren: () => import('./instrument/instrument.module').then( m => m.InstrumentPageModule)
   }
 ];
 

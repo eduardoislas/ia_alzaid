@@ -1,0 +1,75 @@
+<app-header titulo="Publicaciones"></app-header>
+
+<ion-content>
+
+    <!-- Post card -->
+    <ion-card class="post-card">
+        <ion-item lines="none" class="post-item">
+            <ion-avatar slot="start">
+                <img src="../../assets/avatars/av-1.png">
+            </ion-avatar>
+            <ion-input placeholder="Comparte algo..."></ion-input>
+            <ion-buttons slot="end">
+                <ion-button color="medium">
+                    <ion-icon slot="icon-only" name="image"></ion-icon>
+                </ion-button>
+                <ion-button color="medium">
+                    <ion-icon slot="icon-only" name="document-text"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+
+        </ion-item>
+        <ion-button color="primary" size="small" shape="round" expand="block">
+            Compartir
+        </ion-button>
+    </ion-card>
+
+
+    <ng-container>
+        <ion-card class="post-list-card" *ngFor="let post of posts">
+            <ion-item lines="none">
+                <ion-avatar slot="start">
+                    <img [src]="post.image">
+                </ion-avatar>
+                <ion-label>
+                    {{post.name}}
+                    <p>Hace {{post.time}}</p>
+                </ion-label>
+                <ion-buttons slot="end">
+                    <ion-button color="medium">
+                        <ion-icon slot="icon-only" md="ellipsis-vertical-outline" ios="ellipsis-horizontal-outline"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-item>
+
+            <ion-card-content class="post-list-content">
+                {{post.content}}
+            </ion-card-content>
+
+            <ion-item lines="none" class="action-item">
+                <ion-buttons slot="start">
+                    <ion-button color="medium" class="action-button">
+                        <ion-icon slot="start" name="heart-outline"></ion-icon>
+                        {{post.likes}}
+                    </ion-button>
+                    <ion-button color="medium" class="action-button">
+                        <ion-icon slot="start" name="chatbox-outline"></ion-icon>
+                        {{post.comments}}
+                    </ion-button>
+                    <ion-button color="medium" class="action-button">
+                        <ion-icon slot="start" name="return-up-forward-outline"></ion-icon>
+                        {{post.shared}}
+                    </ion-button>
+                </ion-buttons>
+
+                <ion-buttons slot="end">
+                    <ion-button color="medium">
+                        <ion-icon size="small" slot="start" name="eye-outline"></ion-icon>
+                        6
+                    </ion-button>
+                </ion-buttons>
+            </ion-item>
+        </ion-card>
+    </ng-container>
+
+</ion-content>

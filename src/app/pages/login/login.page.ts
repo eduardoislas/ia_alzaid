@@ -74,6 +74,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     //this.slides.lockSwipes(true);
+    this.menu.enable(false, 'first');
   }
 
   login( fLogin: NgForm ){
@@ -162,7 +163,7 @@ export class LoginPage implements OnInit {
 
   disparaAlerta(success: boolean){
     if(success){
-      this.router.navigateByUrl( 'home' );
+      this.router.navigateByUrl( '/home' );
     }else{
       Swal.fire({
         icon: 'error',

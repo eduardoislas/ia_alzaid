@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user.model';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-profile',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
-  constructor() { }
+  user: User = new User();
+  
+  constructor(private storage: Storage) {
+    this.storage.get('usuario').then((val) => {
+      this.user = val;
+    })
+   }
 
   ngOnInit() {
   }

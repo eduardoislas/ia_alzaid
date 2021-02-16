@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar>
+
+        <ion-buttons slot="start">
+            <!-- <ion-back-button text="Regresar" defaultHref="home"></ion-back-button> -->
+            <ion-back-button defaultHref="indicators"></ion-back-button>
+        </ion-buttons>
+
+        <ion-title text-capitalize>Titulo instrumento</ion-title>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item *ngFor="let i of instruments | async">
+        <ion-grid fixed>
+            <ion-row>
+                <label>
+            <h3>{{i.item}}</h3>
+        </label>
+            </ion-row>
+            <ion-row>
+                <ion-radio-group value="question">
+                    <ion-item *ngFor="let a of i.answers">
+                        <ion-label>{{a.answer}}</ion-label>
+                        <ion-radio slot="start" value="{{a.points}}"></ion-radio>
+                    </ion-item>
+                </ion-radio-group>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+
+    <ion-button shape="round" expand="full" size="small" color="primary" (click)="save()">
+        Guardar
+    </ion-button>
+
+</ion-content>

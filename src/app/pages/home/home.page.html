@@ -34,7 +34,9 @@
                     <div *ngIf="message.content!='init_chat_saludo'" class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
                                             'to':   message.sentBy === 'user' }">
 
-                        <img class="profile_pic" src="{{message.profile_pic}}">
+                        <!-- <img class="profile_pic" src="{{message.profile_pic}}"> -->
+                        <img *ngIf="message.sentBy === 'bot'" class="profile_pic" src="{{message.profile_pic}}">
+                        <img *ngIf="message.sentBy === 'user'" class="profile_pic" src="{{user.picture}}">
                         <div *ngIf="message.placeholder">
                             <img class="placeholder" src="../../assets/img/typing.gif">
                         </div>
