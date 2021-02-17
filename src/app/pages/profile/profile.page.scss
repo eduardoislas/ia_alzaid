@@ -4,7 +4,7 @@
 
 ion-toolbar {
     position: absolute;
-    top: 0;
+    top: 1;
     left: 0;
     right: 0;
     --background: transparent;
@@ -24,7 +24,7 @@ ion-toolbar ion-menu-button {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: calc(250px + var(--ion-safe-area-top));
+    height: calc(150px + var(--ion-safe-area-top));
     background: center / cover url(/assets/img/user-background.png) no-repeat;
 }
 
@@ -62,4 +62,8 @@ ion-toolbar ion-menu-button {
     margin-top: 20px;
     margin-bottom: 20px;
     background: var(--ion-color-step-150, #d7d8da);
+}
+
+.contenido {
+    margin-top: 45px;
 }

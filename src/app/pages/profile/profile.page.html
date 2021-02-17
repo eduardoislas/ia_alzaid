@@ -8,11 +8,104 @@
         <h2>{{user.name}}</h2>
     </div>
 
-    <div class="ion-padding speaker-detail">
-        <p>Párrafo de perfil</p>
 
-        <hr>
+    <ion-toolbar>
+        <ion-item>
+            <ion-segment value="1" (ionChange)="segmentChanged($event)" color="primary">
+                <ion-segment-button value="1">
+                    <ion-label>Generales</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="2">
+                    <ion-label>Evolución</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-item>
 
+    </ion-toolbar>
+
+    <div class="contenido" *ngIf="segment">
+        <ion-list>
+            <ion-item>
+                <ion-input> {{user.name}}</ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="email">correo@correo.com</ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input>********</ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Género</ion-label>
+                <ion-select placeholder="Selecciona">
+                    <ion-select-option value="f">Femenino</ion-select-option>
+                    <ion-select-option value="m">Masculino</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">DD/MM/YYYY</ion-label>
+                <ion-datetime displayFormat="DD/MM/YYYY" min="1920-01-01" max="2000-01-01"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>Cuidador principal</ion-label>
+                <ion-select placeholder="Selecciona">
+                    <ion-select-option value="true">Si</ion-select-option>
+                    <ion-select-option value="false">No</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Tiempo de cuidador</ion-label>
+                <ion-select placeholder="Selecciona">
+                    <ion-select-option value="1">Menos de 1 año</ion-select-option>
+                    <ion-select-option value="2">1 a 3 años</ion-select-option>
+                    <ion-select-option value="3">Más de 3 años</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>La persona cuidada es mi:</ion-label>
+                <ion-select placeholder="Selecciona">
+                    <ion-select-option value="1">Pareja</ion-select-option>
+                    <ion-select-option value="2">Papá/Mamá</ion-select-option>
+                    <ion-select-option value="3">Abuelo(a)</ion-select-option>
+                    <ion-select-option value="4">Otro familiar</ion-select-option>
+                    <ion-select-option value="5">Amigo(a)</ion-select-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-button slot="end" expand="block" shape="round" color="primary">Guardar</ion-button>
+            </ion-item>
+        </ion-list>
     </div>
+
+    <div class="contenido" *ngIf="!segment">
+        <ion-list-header color="light"></ion-list-header>
+        <ion-card class="welcome-card">
+            <ion-card-header>
+                <ion-card-subtitle>Nivel de Sobrecarga:</ion-card-subtitle>
+                <ion-card-title>Leve</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <img src="../../assets/img/sobrecarga.png">
+            </ion-card-content>
+        </ion-card>
+        <ion-card class="welcome-card">
+            <ion-card-header>
+                <ion-card-subtitle>Nivel de Ansiedad:</ion-card-subtitle>
+                <ion-card-title>Moderada</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <img src="../../assets/img/ansiedad.png">
+            </ion-card-content>
+        </ion-card>
+        <ion-card class="welcome-card">
+            <ion-card-header>
+                <ion-card-subtitle>Nivel de Depresión:</ion-card-subtitle>
+                <ion-card-title>Moderada</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <img src="../../assets/img/depresion.png">
+            </ion-card-content>
+        </ion-card>
+    </div>
+
 
 </ion-content>
