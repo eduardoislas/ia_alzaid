@@ -8,7 +8,7 @@
 
         <ion-buttons slot="end" (click)="perfil()">
             <ion-avatar>
-                <img src="{{user.picture}}">
+                <img src="../../../assets/avatars/av-1.png">
             </ion-avatar>
         </ion-buttons>
 
@@ -21,7 +21,7 @@
         <ion-row>
             <ion-col>
                 <ion-item>
-                    <ion-label class="saludo">¡Hola {{user.name}}!</ion-label>
+                    <ion-label class="saludo">¡Hola Usuario!</ion-label>
                 </ion-item>
             </ion-col>
         </ion-row>
@@ -36,7 +36,7 @@
 
                         <!-- <img class="profile_pic" src="{{message.profile_pic}}"> -->
                         <img *ngIf="message.sentBy === 'bot'" class="profile_pic" src="{{message.profile_pic}}">
-                        <img *ngIf="message.sentBy === 'user'" class="profile_pic" src="{{user.picture}}">
+                        <img *ngIf="message.sentBy === 'user'" class="profile_pic" src="../../../assets/avatars/av-1.png">
                         <div *ngIf="message.placeholder">
                             <img class="placeholder" src="../../assets/img/typing.gif">
                         </div>

@@ -1,12 +1,12 @@
 [{
-        "icon": "home",
-        "name": "Principal",
-        "redirectTo": "home"
-    },
-    {
         "icon": "thumbs-up",
         "name": "Publicaciones",
         "redirectTo": "posts"
+    },
+    {
+        "icon": "contract",
+        "name": "Servicios",
+        "redirectTo": "services"
     },
     {
         "icon": "mail",

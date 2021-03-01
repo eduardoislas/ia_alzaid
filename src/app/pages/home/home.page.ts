@@ -40,9 +40,12 @@ export class HomePage implements OnInit, OnDestroy {
     ) 
     { 
       this.menu.enable(true, 'first');
-      this.storage.get('usuario').then((val) => {
-        this.user = val;
-    })
+    //   this.storage.get('usuario').then((val) => {
+    //     this.user = val;
+    // })
+    // if (!this.user){
+    //   this.user = new User();
+    // }
   }
   
   ngOnInit() {
@@ -145,12 +148,12 @@ export class HomePage implements OnInit, OnDestroy {
         //Replace placeholder (gif) with bot  responseonse
         this.messages[this.messages.length-1]=data[0];
         //And now TTS
-        this.tts.speak({
-          text: data[0].content,
-          locale: 'es-MX'
-        })
-        .then(() => console.log('Success') )
-        .catch((reason: any) => console.log(reason));
+        // this.tts.speak({
+        //   text: data[0].content,
+        //   locale: 'es-MX'
+        // })
+        // .then(() => console.log('Success') )
+        // .catch((reason: any) => console.log(reason));
         //execute action
         this.doAction(data[0]);
         }

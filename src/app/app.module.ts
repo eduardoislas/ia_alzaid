@@ -13,11 +13,12 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
 import { ComponentsModule } from './components/components.module';
 import { HttpClientModule } from '@angular/common/http';
 
-import { firebaseConfig } from '../environments/environment';
+import { firebaseConfig, environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { IonicStorageModule } from '@ionic/storage';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { IonicStorageModule } from '@ionic/storage';
     HttpClientModule, 
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     StatusBar,

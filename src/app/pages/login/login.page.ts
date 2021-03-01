@@ -86,11 +86,12 @@ export class LoginPage implements OnInit {
   }
 
   loginGoogle() {
-    if (this.platform.is('android')) {
-      this.loginGoogleAndroid();
-    } else {
-      this.loginGoogleWeb();
-    }
+    // if (this.platform.is('android')) {
+    //   this.loginGoogleAndroid();
+    // } else {
+    //   this.loginGoogleWeb();
+    //   // this.loginGoogleAndroid();
+    // }
   }
 
   async loginGoogleAndroid() {
@@ -113,14 +114,28 @@ export class LoginPage implements OnInit {
     // this.picture = user.photoURL;
     // this.name = user.displayName;
     // this.email = user.email;
-    this.cargarDatos(user);
+    // this.cargarDatos(user);
+    this.user= new User();
+    console.log(user);
+    this.data.saveUser(this.user);
+    this.disparaAlerta(true)
   }
 
   cargarDatos(user){
-    this.user.name = user.displayName;
-    this.user.email = user.email;
-    this.user.picture = user.photoURL;
-    this.user.isGoogle = user.emailVerified;
+    // if(!user){
+    //   this.user.name = user.displayName;
+    //   this.user.email = user.email;
+    //   this.user.picture = user.photoURL;
+    //   this.user.isGoogle = user.emailVerified;
+    // }else{
+    //   this.user = new User();
+    // }
+
+      this.user.name = user.displayName;
+      this.user.email = user.email;
+      this.user.picture = user.photoURL;
+      this.user.isGoogle = user.emailVerified;
+
     console.log(this.user);
     this.data.saveUser(this.user);
     this.disparaAlerta(this.user.isGoogle)
