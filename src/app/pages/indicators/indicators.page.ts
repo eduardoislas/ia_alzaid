@@ -79,4 +79,10 @@ export class IndicatorsPage implements OnInit {
     }
   }
 
+//   Opción de menú
+//   {
+//     "icon": "options",
+//     "name": "Indicadores",
+//     "redirectTo": "indicators"
+// },
 }

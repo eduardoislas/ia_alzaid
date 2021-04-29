@@ -14,9 +14,9 @@
         "redirectTo": "inbox"
     },
     {
-        "icon": "options",
-        "name": "Indicadores",
-        "redirectTo": "indicators"
+        "icon": "chatbubbles",
+        "name": "Chat",
+        "redirectTo": "chat"
     },
     {
         "icon": "person",
