@@ -12,39 +12,49 @@ export class IndicatorsPage implements OnInit {
     // 1 - Pacientes
     // 2 - Cuidadores
     {
-      instrument: 'barthel',
+      instrument: 'Barthel',
       title: 'Actividades Básicas de la vida diaria',
       current_value: 'Dependencia leve',
+      value: 1,
       toWhom: 1
     },
     {
+      instrument: 'Lawton y Brody',
       title: 'Actividades Instrumentales de la vida diaria',
       current_value: 'Dependencia moderada',
+      value: 2,
       toWhom: 1
     },
     {
+      instrument: 'Tinetti',
       title: 'Equilibrio y marcha',
       current_value: 'Alto riesgo de caída',
+      value: 3,
       toWhom: 1
     },
     {
+      instrument: 'MMSE',
       title: 'Deterioro cognitivo',
       current_value: 'Deterioro leve',
+      value: 1,
       toWhom: 1
     },
     {
       title: 'Escala Zarit',
       current_value: 'Sobrecarga leve',
+      value: 1,
       toWhom: 2
     },
     {
       title: 'Escala HAD-A',
       current_value: 'Ansiedad moderada',
+      value: 2,
       toWhom: 2
     },
     {
       title: 'Escala CES-D',
       current_value: 'Depresión moderada',
+      value: 2,
       toWhom: 2
     },
   ];

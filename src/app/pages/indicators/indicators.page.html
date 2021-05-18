@@ -16,14 +16,23 @@
 <ion-content>
     <ion-item *ngFor="let i of instruments_selected">
         <ion-label>
+            <h2>{{i.instrument}}</h2>
             <h3>{{i.title}}</h3>
-            <p>{{i.current_value}}</p>
+            <div *ngIf="i.value===1">
+                <p class="leve">{{i.current_value}}</p>
+            </div>
+            <div *ngIf="i.value===2">
+                <p class="moderada">{{i.current_value}}</p>
+            </div>
+            <div *ngIf="i.value===3">
+                <p class="alta">{{i.current_value}}</p>
+            </div>
         </ion-label>
-        <ion-button slot="end" color="primary" shape="round" routerLink="instrument">
-            <ion-icon name="list"></ion-icon>
-        </ion-button>
         <ion-button slot="end" color="primary" shape="round">
-            <ion-icon name="pencil"></ion-icon>
+            <ion-icon name="list"></ion-icon> Ver
+        </ion-button>
+        <ion-button slot="end" color="primary" shape="round" routerLink="instrument">
+            <ion-icon name="pencil"></ion-icon> Llenar
         </ion-button>
     </ion-item>
 </ion-content>
